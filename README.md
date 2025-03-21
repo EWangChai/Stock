@@ -4,8 +4,9 @@
 |  
 |---**每日复盘**，根目录    
 |&emsp;<sup>|</sup>---**当前周目录**，如：2025-03-17到03-21    
-|&emsp;&emsp;&nbsp;<sup>|</sup>---复盘文档1，如：03-18周二&nbsp;标题.md  
-|&emsp;&emsp;&nbsp;<sup>|</sup>---复盘文档2，如：03-19周三&nbsp;标题.md  
+|&emsp;&emsp;&nbsp;<sup>|</sup>---复盘文档1，如：03-19周三_无功无过.md  
+|&emsp;&emsp;&nbsp;<sup>|</sup>---复盘文档2，如：03-20周四_金奥博错失良机.md  
+|  
 |&emsp;<sup>|</sup>---**年目录**，如：2025年_成长才能走向自由  
 |&emsp;&emsp;&nbsp;<sup>|</sup>---**历史周目录1**  
 |&emsp;&emsp;&emsp;&nbsp;&nbsp;<sup>|</sup>---复盘文档1  
