@@ -12,7 +12,7 @@
 
 新增复盘时，创建到根目录。将上一日的复盘文档挪到对应周目录中。
 
-> [!Tip]
+> [!IMPORTANT]
 > 复盘包含大盘分析，个股分析。
 >
 > **大盘分析包含：**  
@@ -26,11 +26,12 @@
 
 
 ## 其他
-**一些Github支持的语法**
 
-[Github Markdown官方文档](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#hiding-content-with-comments)
+**1.一些Github支持的语法**
 
-* 五种类型的警报   
+> [Github Markdown官方文档](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#hiding-content-with-comments)
+
+* **五种类型的警报**   
 
 ```
 > [!NOTE]
