@@ -1,0 +1,43 @@
+## 通达信选股公式
+
+* expma参数为4和19
+* rsi参数为6，12和24
+* macd参数是7，14和5
+* 条件：expma金叉，macd金叉，rsi3大于50，金叉当日成交量大于5日平均成交量的1.2倍
+
+```
+{参数设置}
+EXP1_PERIOD:=4;     {短期EXPMA周期}
+EXP2_PERIOD:=19;    {长期EXPMA周期}
+MACD_SHORT:=7;      {MACD短期EMA周期}
+MACD_LONG:=14;      {MACD长期EMA周期}
+MACD_MID:=5;        {MACD信号EMA周期}
+RSI3_PERIOD:=24;    {RSI长周期}
+VOL_RATIO:=1.2;     {量能放大倍数}
+
+{EXPMA金叉判断}
+EXP1:=EXPMA(CLOSE,EXP1_PERIOD);
+EXP2:=EXPMA(CLOSE,EXP2_PERIOD);
+EXPMA_JC:=CROSS(EXP1,EXP2);
+
+{MACD金叉判断}
+DIF:=EMA(CLOSE,MACD_SHORT)-EMA(CLOSE,MACD_LONG);
+DEA:=EMA(DIF,MACD_MID);
+MACD_JC:=CROSS(DIF,DEA);
+
+{手动计算RSI}
+LC:=REF(CLOSE,1);       {昨日收盘价}
+RSI_UP:=MAX(CLOSE-LC,0);{当日涨幅}
+RSI_DN:=MAX(LC-CLOSE,0);{当日跌幅}
+RSI3_UP:=SMA(RSI_UP,RSI3_PERIOD,1); {24日平均涨幅}
+RSI3_DN:=SMA(RSI_DN,RSI3_PERIOD,1); {24日平均跌幅}
+RSI3:=IF(RSI3_DN>0,RSI3_UP/(RSI3_UP+RSI3_DN)*100,100); {RSI3计算}
+
+{成交量放大条件}
+VOL_MA5:=MA(VOL,5);
+VOL_COND:=VOL>VOL_MA5*VOL_RATIO;
+
+{综合选股条件}
+选股条件:EXPMA_JC AND MACD_JC AND RSI3>50 AND VOL_COND;
+```
+
