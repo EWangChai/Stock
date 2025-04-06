@@ -53,3 +53,11 @@
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 ```
+
+**2.Typora永久试用教程**
+
+打开注册表编辑器（Win+R → 输入 regedit）
+定位至 计算机\HKEY_CURRENT_USER\SOFTWARE\Typora
+双击 IDate → 修改数值为 2099-01-01
+右键 Typora 注册表项 → 选择 权限 → 选中 Administrators 用户组
+勾选 完全控制 为拒绝 → 应用设置并忽略警告弹窗
